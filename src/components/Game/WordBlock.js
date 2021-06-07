@@ -8,7 +8,7 @@ export default function WordBlock( { wordBlock }) {
     })
 
     return (
-        <div>
+        <div className="WordBlock">
             {words}
         </div>
     )
