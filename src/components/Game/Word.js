@@ -10,7 +10,7 @@
     }, [input])
     return (
         <div className={`Word ${correct ? 'correct' : ''}`}>
-            <input type="text" value={input} onChange={handleInput} />
+            style={{width: word.length + 'ch'}} tabIndex={-1} ref={wordRef}/>
         </div>
     )
 }
