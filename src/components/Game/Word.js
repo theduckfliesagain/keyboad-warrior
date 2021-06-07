@@ -11,6 +11,7 @@
     return (
         <div className={`Word ${correct ? 'correct' : ''}`}>
             style={{width: word.length + 'ch'}} tabIndex={-1} ref={wordRef}/>
+            <span>{word}</span>
         </div>
     )
 }
