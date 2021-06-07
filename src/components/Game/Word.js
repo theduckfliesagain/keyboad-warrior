@@ -9,6 +9,7 @@
         setCorrect(word.startsWith(input))
     }, [input])
     return (
+        <div className={`Word ${correct ? 'correct' : ''}`}>
             <input type="text" value={input} onChange={handleInput} />
         </div>
     )
