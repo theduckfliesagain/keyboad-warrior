@@ -1,5 +1,9 @@
-import React from 'react'
+/* eslint-disable no-unused-vars */
+import React, { useEffect, useRef } from 'react'
 import Word from './Word';
+import './WordBlock.scss'
+
+export default function WordBlock({ wordBlock }) {
 
     const wordRefs = useRef([])
     
