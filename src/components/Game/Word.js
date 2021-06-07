@@ -2,8 +2,7 @@
 
 export default function Word({ word }) {
     return (
-        <div>
-            { word }
+            <input type="text" value={input} onChange={handleInput} />
         </div>
     )
 }
