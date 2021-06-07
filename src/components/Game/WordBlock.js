@@ -2,6 +2,11 @@ import React from 'react'
 import Word from './Word';
 
     const wordRefs = useRef([])
+    
+    useEffect(() => {
+        wordRefs.current[0].focus()
+    }, []);
+
     const complete = (idx) => {
         if (idx < words.length - 1) {
             wordRefs.current[idx + 1].focus()    
