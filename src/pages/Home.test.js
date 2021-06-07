@@ -1,9 +1,11 @@
 import { screen , render} from '@testing-library/react';
+import { MemoryRouter } from "react-router-dom";
 import Home from './Home'
 
 describe('Home Page', () => {
+    beforeEach(() => render(<Home />, { wrapper: MemoryRouter }));
+
     it('should display a logo', () => {
-        render(<Home />)
         expect(screen.getByAltText(/logo/)).toBeInTheDocument()
     });
 
