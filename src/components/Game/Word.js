@@ -1,4 +1,4 @@
-import React from 'react'
+    const [input, setInput] = useState('');
 
 export default function Word({ word }) {
     return (
