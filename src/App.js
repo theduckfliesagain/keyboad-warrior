@@ -1,12 +1,18 @@
 // import logo from './logo.svg';
 import './App.scss';
-import * as Pages from './pages' 
+import * as Pages from './pages'
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <Pages.Game />
-    </div>
+    <Router>
+      <div className="App">
+        <Switch >
+          <Route path="/play" render={Pages.Game} />
+          <Route path="/" render={Pages.Home} />
+        </Switch>
+      </div>
+    </Router>
   );
 }
 
