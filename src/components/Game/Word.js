@@ -5,7 +5,9 @@
         if ((word).startsWith(e.target.value)) setInput(e.target.value)
     }
 
-export default function Word({ word }) {
+    useEffect(() => {
+        setCorrect(word.startsWith(input))
+    }, [input])
     return (
             <input type="text" value={input} onChange={handleInput} />
         </div>
