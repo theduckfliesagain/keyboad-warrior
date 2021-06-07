@@ -1,8 +1,7 @@
 import React from 'react'
 import Word from './Word';
 
-export default function WordBlock( { wordBlock }) {
-    
+    const wordRefs = useRef([])
     const words = wordBlock.split(' ').map((word, idx) => (
         <Word 
             key={idx} id={idx} word={word} complete={complete} 
