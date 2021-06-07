@@ -1,0 +1,30 @@
+.Word {
+    // margin: 5px;
+    width: fit-content;
+    position: relative;
+    text-align: center;
+    font-size: 2em;
+
+    &.correct {
+        color: blue;
+    }
+
+    input {
+        // width: auto;
+        // position: relative;
+        // text-align: center;
+        border: 1px solid blue;
+        outline: none;
+        margin: 0;
+        padding: 0;
+        font: inherit;
+        color: inherit;
+    }
+    span {
+        text-align: center;
+        color: rgba(0, 0, 0, 0.219);
+        font: inherit;
+        left: 1px;
+        position: absolute;
+    }
+}
