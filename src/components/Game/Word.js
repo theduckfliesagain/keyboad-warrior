@@ -5,6 +5,9 @@
         if ((word).startsWith(e.target.value)) setInput(e.target.value)
     }
 
+    const handleComplete = (e) => {
+        if(word === input && e.code === 'Space') complete(id)
+    }
     useEffect(() => {
         setCorrect(word.startsWith(input))
     }, [input])
