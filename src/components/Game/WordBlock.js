@@ -3,7 +3,7 @@ import React, { useEffect, useRef } from 'react'
 import Word from './Word';
 import './WordBlock.scss'
 
-export default function WordBlock({ wordBlock }) {
+export default function WordBlock({ wordBlock, updateStats }) {
 
     const wordRefs = useRef([])
     
@@ -11,7 +11,8 @@ export default function WordBlock({ wordBlock }) {
         wordRefs.current[0].focus()
     }, []);
 
-    const complete = (idx) => {
+    const complete = (idx, accuracy) => {
+        updateStats({accuracy: accuracy})
         if (idx < words.length - 1) {
             wordRefs.current[idx + 1].focus()    
         } else {
