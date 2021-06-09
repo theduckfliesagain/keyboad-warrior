@@ -8,8 +8,8 @@ function App() {
     <Router>
       <div className="App">
         <Switch >
-          <Route path="/play" render={Pages.Game} />
-          <Route path="/" render={Pages.Home} />
+        <Route exact path="/" component={Pages.Home} />
+        <Route path="/play" component={Pages.Game} />
         </Switch>
       </div>
     </Router>
