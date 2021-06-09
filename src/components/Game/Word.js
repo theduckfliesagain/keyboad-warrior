@@ -5,9 +5,14 @@ import './Word.scss'
 export default function Word({ id, word, complete, wordRef }) {
     const [input, setInput] = useState('');
     const [correct, setCorrect] = useState(false);
+    const [accuracy, setAccuracy] = useState(1.0);
 
     const handleInput = (e) => {
-        if ((word).startsWith(e.target.value)) setInput(e.target.value)
+        if ((word).startsWith(e.target.value)) {
+            setInput(e.target.value)
+        } else if (input) {
+            setAccuracy(prev => prev * (word.length - 1)/word.length)
+        }
     }
 
     const handleComplete = (e) => {
