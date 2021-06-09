@@ -1,4 +1,4 @@
-import React from 'react'
+import { useState } from 'react'
 import { WordBlock } from '../components/Game'
 
 export default function Game() {
@@ -18,7 +18,10 @@ export default function Game() {
 
     return (
         <div>
-            <WordBlock wordBlock={wordBlock}/>
+            <WordBlock wordBlock={wordBlock} updateStats={updateStats} />
+            { Math.round(stats.score)}
+            <br/>
+            { Math.round(stats.accuracy.reduce((a,b) => a + b, 0)/stats.accuracy.length * 100 )}%
         </div>
     )
 }
