@@ -16,7 +16,7 @@ export default function Word({ id, word, complete, wordRef }) {
     }
 
     const handleComplete = (e) => {
-        if(word === input && e.code === 'Space') complete(id)
+        if(word === input && e.code === 'Space') complete(id, accuracy)
     }
 
     useEffect(() => {
