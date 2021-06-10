@@ -10,8 +10,8 @@ export default function Word({ id, word, complete, wordRef }) {
     const handleInput = (e) => {
         if ((word).startsWith(e.target.value)) {
             setInput(e.target.value)
-        } else if (input) {
-            setAccuracy(prev => prev * (word.length - 1)/word.length)
+        } else {
+            input && setAccuracy(prev => prev * (word.length - 1)/word.length)
         }
     }
 
